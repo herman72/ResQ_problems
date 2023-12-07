@@ -1,0 +1,25 @@
+WITH holiday_sales AS (
+    SELECT
+        'Holiday' AS sales_type,
+        AVG(sales) AS avg_sales
+    FROM
+        orders
+    WHERE
+        DATE(createdAt) IN (
+            SELECT DATE(holiday_date) FROM holiday
+        )
+),
+daily_sales AS (
+    SELECT
+        'Non-Holiday' AS sales_type,
+        AVG(sales) AS avg_sales
+    FROM
+        orders
+    WHERE
+        DATE(createdAt) NOT IN (
+            SELECT DATE(holiday_date) FROM holiday
+        )
+)
+SELECT * FROM holiday_sales
+UNION ALL
+SELECT * FROM daily_sales;

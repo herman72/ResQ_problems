@@ -1,0 +1,29 @@
+WITH daily_sales AS (
+    SELECT
+        DATE(createdAt) AS order_date,
+        AVG(sales) AS avg_sales
+    FROM
+        orders
+    WHERE
+        DATE(createdAt) NOT IN (
+            SELECT DATE(holiday_date) FROM holiday
+        )
+    GROUP BY
+        DATE(createdAt)
+),
+avg_daily_sales AS (
+    SELECT AVG(avg_sales) AS avg_sale
+    FROM daily_sales
+)
+SELECT
+    holiday.holiday_date,
+    AVG(orders.sales) AS avg_sales_on_holiday,
+    avg_sale
+FROM
+    holiday
+JOIN
+    orders ON DATE(orders.createdAt) = DATE(holiday.holiday_date)
+CROSS JOIN
+    avg_daily_sales
+GROUP BY
+    holiday.holiday_date, avg_sale;

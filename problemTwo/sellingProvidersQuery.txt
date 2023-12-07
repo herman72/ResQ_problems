@@ -1,0 +1,19 @@
+SELECT
+    'Holidays' AS Day_Type,
+    COUNT(DISTINCT providerId) AS Unique_Providers
+FROM
+    orders
+WHERE
+    DATE(createdAt) IN (
+        SELECT DATE(holiday_date) FROM holiday
+    )
+UNION ALL
+SELECT
+    'Normal Days' AS Day_Type,
+    COUNT(DISTINCT providerId) AS Unique_Providers
+FROM
+    orders
+WHERE
+    DATE(createdAt) NOT IN (
+        SELECT DATE(holiday_date) FROM holiday
+    );
