@@ -1,0 +1,3 @@
+CREATE view presentation AS
+SELECT orders.*, strftime('%Y-%m', createdAt) AS month, strftime('%Y', users.registeredDate) AS registeredYear, providers.defaultOfferType 
+FROM orders INNER JOIN users ON orders.userId = users.id INNER JOIN providers ON orders.providerId = providers.id; 
