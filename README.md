@@ -89,7 +89,19 @@ This section provides a detailed description of the files in this project.
 
 This section provides instructions on how to automate the execution of your Python script and refresh your Metabase dashboard.
 
+### Automation in Production
+
+In production, we can integrate Airflow and Metabase to automate the creation and preparation of data, as well as the plotting of results.
+
+Airflow, with its Directed Acyclic Graph (DAG) model, simplifies the orchestration and scheduling of transformations, ensuring accurate and timely execution. Each task in the pipeline is represented as a node in the DAG, and the dependencies between tasks are represented as edges. This allows for complex workflows to be visualized and managed effectively.
+
+Meanwhile, Metabase offers an intuitive and user-friendly interface for visualizing the transformed data, enabling users to gain valuable insights effortlessly. By integrating these tools, you can enhance your data workflows, automate processes, and make informed decisions with ease.
+
+![arch-diag-basic](https://github.com/herman72/ResQ_problems/assets/36226207/735c6bc1-41af-4f3b-976c-28693ab2dee9)
+
+
 ### Automating Python Script Execution
+
 
 To run your Python script periodically, you can use a cron job. Follow these steps:
 
