@@ -26,3 +26,7 @@ Metabase is used for creating dashboards in this project. You can set it up by v
 [Jar file](https://www.metabase.com/docs/latest/installation-and-operation/running-the-metabase-jar-file)
 
 [Docker](https://www.metabase.com/docs/latest/installation-and-operation/running-metabase-on-docker)
+
+## full project report
+
+[You can view the full project report at the link below.](https://github.com/herman72/ResQ_problems/blob/main/Project%20Report.pdf)
