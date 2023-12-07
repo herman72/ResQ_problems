@@ -43,16 +43,15 @@ This section provides a detailed description of the files in this project.
     - Purpose: This file is used to create a table using the pandas library and save it as a database file.
     - Language: Python
     - Libraries Used: pandas
+    - *Get results just by run python problemTwo.py*
       
-*Get results just by run python problemTwo.py*
 
 2. **problemOneSql.py/problemOneSql.ipynb**: 
     - Purpose: This file is used to create a view in the database. It establishes a connection between Python and SQLite and executes the query.
     - Language: Python
     - Libraries Used: sqlite3
+    - *Get results just by run python problemTwo.py*
       
-*Get results just by run python problemTwo.py*
-
 
 #### Text Files
 
@@ -68,8 +67,8 @@ This section provides a detailed description of the files in this project.
     - Purpose: This file is used to create plots and reports.
     - Language: Python
     - Libraries Used: pandas
+    - *Get report just by run python problemTwo.py*
       
-*Get report just by run python problemTwo.py*
 
 #### Text Files
 
