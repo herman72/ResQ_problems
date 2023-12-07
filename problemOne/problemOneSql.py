@@ -3,7 +3,7 @@ import sqlite3
 import pandas as pd
 
 # Establish a connection to the SQLite database
-conn = sqlite3.connect('./mock_resq.db')
+conn = sqlite3.connect('../mock_resq.db')
 
 # Create a cursor object
 cursor = conn.cursor()
@@ -30,7 +30,7 @@ conn.commit()
 conn.close()
 
 # Re-establish the connection to the SQLite database
-conn = sqlite3.connect('./mock_resq.db')
+conn = sqlite3.connect('../mock_resq.db')
 
 # Create a cursor object
 cursor = conn.cursor()

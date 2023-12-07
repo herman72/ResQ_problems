@@ -8,7 +8,7 @@ from matplotlib.backends.backend_pdf import PdfPages
 
 
 # connect to database 
-conn = sqlite3.connect('./mock_resq.db')
+conn = sqlite3.connect('../mock_resq.db')
 cursor = conn.cursor()
 
 # Execute SQL query to fetch unique years from the createdAt column

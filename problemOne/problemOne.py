@@ -3,7 +3,7 @@ import sqlite3
 import pandas as pd
 
 # Establish a connection to the SQLite database
-conn = sqlite3.connect('./mock_resq.db')
+conn = sqlite3.connect('../mock_resq.db')
 
 # Define SQL queries to fetch data from the tables
 query_orders = "SELECT * FROM orders"
