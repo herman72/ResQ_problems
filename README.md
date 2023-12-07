@@ -106,4 +106,7 @@ Replace /path/to/your/script.py with the actual path to your Python script.
 
 To refresh your dashboard in Metabase, you can use the Auto-refresh feature. Follow the instructions provided in the Metabase documentation to set it up.
 
+<img width="1509" alt="Screenshot 2023-12-07 at 4 25 42 at night" src="https://github.com/herman72/ResQ_problems/assets/36226207/7a5ce71a-647f-476e-8e82-14b8a71b9a46">
+
+
 
